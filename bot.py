@@ -25,6 +25,7 @@ def main():
     # Registrar los manejadores de comando
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("ayuda", ayuda))
+    dispatcher.add_handler(CommandHandler("stop", stop))
 
     # Registrar el manejador de mensajes
     dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command, manejar_mensaje))
